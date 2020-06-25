@@ -1,0 +1,57 @@
+:host
+
+    .slides-holder
+        display: flex
+        flex-direction: row
+        height: 100%
+
+    .button-holder
+        position: relative
+        .button
+            position: absolute
+
+            &:hover
+                filter: brightness(0.5)
+
+            &.prev
+                top: calc(50% - 25px)
+                left: 10px
+
+
+            &.next
+                top: calc(50% - 25px)
+                right: 10px
+
+    .list-holder
+        position: relative
+
+        ul
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+
+            position: relative
+            bottom: 25px
+
+            margin: 0
+
+            list-style-type: none
+            padding: 0
+
+            li
+                margin: 0 10px
+
+    .dot
+        width: 10px
+        height: 10px
+        border-radius: 10px
+        background-color: #ffffff80
+        border: 1px solid #00000080
+
+        &:hover
+            filter: brightness(0.5)
+
+        &.selected
+            width: 20px
+            transition: width 0.2s ease-out

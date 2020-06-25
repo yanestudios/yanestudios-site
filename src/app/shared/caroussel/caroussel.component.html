@@ -1,0 +1,19 @@
+<div class="slides-holder">
+    <div class="button-holder">
+        <img src="assets/images/svg/prev.svg" height="50px" class="button prev" (click)="prev()">
+    </div>
+    
+    <ng-content></ng-content>
+    
+    <div class="button-holder">
+        <img src="assets/images/svg/next.svg" height="50px" class="button next" (click)="next()">
+    </div>
+</div>
+
+<div class="list-holder">
+    <ul>
+        <li *ngFor="let dot of childrenList; index as i;" (click)="setSlide(i)">
+            <div class="dot" [ngClass]="{'selected': index == i}"></div>
+        </li>
+    </ul>
+</div>
